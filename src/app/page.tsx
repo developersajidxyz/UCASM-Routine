@@ -164,7 +164,7 @@ function HomeContent({
     <div className="container">
       <header>
         <div className="title">
-          <h1>UCASM <p>Department of CSE</p></h1>
+          <h1><a href="https://ucasm.netlify.app/">UCASM </a><p>Department of CSE</p></h1>
         </div>
         <div>
           <button
