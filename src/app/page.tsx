@@ -1,8 +1,9 @@
 
 "use client";
 import React, { useState, useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import InstructorTable from "../components/InstructorTable";
+import SearchParamsProvider from "../components/SearchParamsProvider";
 import database from "../data/Database.json";
 
 type Schedule = { 
@@ -16,13 +17,54 @@ type Schedule = {
 export default function Home() {
   const db = database;
   const router = useRouter();
-  const searchParams = useSearchParams();
   
   // Initialize state from URL parameters
   const [instructorMode, setInstructorMode] = useState(false);
   const [selectedBatch, setSelectedBatch] = useState(0);
   const [selectedInstructor, setSelectedInstructor] = useState<string>(db.instructors[0]?.short || "");
 
+  return (
+    <SearchParamsProvider>
+      {(searchParams) => (
+        <HomeContent 
+          searchParams={searchParams}
+          router={router}
+          db={db}
+          instructorMode={instructorMode}
+          setInstructorMode={setInstructorMode}
+          selectedBatch={selectedBatch}
+          setSelectedBatch={setSelectedBatch}
+          selectedInstructor={selectedInstructor}
+          setSelectedInstructor={setSelectedInstructor}
+        />
+      )}
+    </SearchParamsProvider>
+  );
+}
+
+interface HomeContentProps {
+  searchParams: URLSearchParams;
+  router: any;
+  db: any;
+  instructorMode: boolean;
+  setInstructorMode: (value: boolean) => void;
+  selectedBatch: number;
+  setSelectedBatch: (value: number) => void;
+  selectedInstructor: string;
+  setSelectedInstructor: (value: string) => void;
+}
+
+function HomeContent({
+  searchParams,
+  router,
+  db,
+  instructorMode,
+  setInstructorMode,
+  selectedBatch,
+  setSelectedBatch,
+  selectedInstructor,
+  setSelectedInstructor
+}: HomeContentProps) {
   // Initialize state from URL parameters on component mount
   useEffect(() => {
     const mode = searchParams.get('mode');
@@ -42,10 +84,10 @@ export default function Home() {
       }
     }
 
-    if (instructor && db.instructors.find(inst => inst.short === instructor)) {
+    if (instructor && db.instructors.find((inst: any) => inst.short === instructor)) {
       setSelectedInstructor(instructor);
     }
-  }, [searchParams, db.batches.length, db.instructors]);
+  }, [searchParams, db.batches.length, db.instructors, setInstructorMode, setSelectedBatch, setSelectedInstructor]);
 
   const batches = db.batches;
   const days = db.days;
@@ -56,7 +98,7 @@ export default function Home() {
   const getActiveDays = () => {
     if (!currentBatch.schedule) return [];
     
-    return days.filter(day => {
+    return days.filter((day: string) => {
       const daySchedule = (currentBatch.schedule as any)?.[day];
       if (!daySchedule || !Array.isArray(daySchedule)) return false;
       
@@ -129,7 +171,7 @@ export default function Home() {
         <div className="batch-info" style={{display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between"}}>
           <div>
             {instructorMode ? (
-              <h2 id="currentBatch">{db.instructors.find(i => i.short === selectedInstructor)?.full_name || ""}</h2>
+              <h2 id="currentBatch">{db.instructors.find((i: any) => i.short === selectedInstructor)?.full_name || ""}</h2>
             ) : (
               <>
                 <h2 id="currentBatch">{currentBatch.batch}</h2>
@@ -152,10 +194,10 @@ export default function Home() {
               }}
             >
               {instructorMode
-                ? db.instructors.map((inst) => (
+                ? db.instructors.map((inst: any) => (
                     <option key={inst.short} value={inst.short}>{inst.full_name}</option>
                   ))
-                : batches.map((batch, idx) => (
+                : batches.map((batch: any, idx: number) => (
                     <option key={batch.batch} value={idx}>{batch.batch}</option>
                   ))}
             </select>
@@ -169,16 +211,16 @@ export default function Home() {
               <thead>
                 <tr>
                   <th>Time/Day</th>
-                  {activeDays.map(day => (
+                  {activeDays.map((day: string) => (
                     <th key={day}>{day}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {timeSlots.map((slot, slotIdx) => (
+                {timeSlots.map((slot: string, slotIdx: number) => (
                   <tr key={slotIdx}>
                     <td className="cell-regular">{slot}</td>
-                    {activeDays.map(day => {
+                    {activeDays.map((day: string) => {
                       const dayArr = (currentBatch.schedule as any)?.[day] || [];
                       const cell = Array.isArray(dayArr) && dayArr[slotIdx] ? dayArr[slotIdx] : undefined;
                       return (
