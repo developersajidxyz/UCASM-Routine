@@ -1,0 +1,197 @@
+{
+  "Department": "CSE",
+  "days": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+  "time_slots": ["09:30-10:30", "10:40-11:40", "11:50-12:50", "12:50-01:20", "01:20-02:20", "02:30-3:30", "3:40-4:40"],
+  "batches": [
+    {
+      "batch": "CSE 9 (7th Sem.)",
+      "room_no": "204",
+      "schedule": {
+        "Saturday": [
+          {"course": "AI", "instructor": "TA"},
+          {"course": "CDC LAB", "instructor": "KSHS"},
+          {"course": "EWF", "instructor": "KSHS"},
+          {"course": "BREAK"},
+          {"course": "CG", "instructor": "NJN"},
+          {"course": "Project Work"}
+        ],
+        "Monday": [
+          {"course": "AI LAB", "instructor": "TA"},
+          {"course": "CDC", "instructor": "KSHS"},
+          {"course": "EWF", "instructor": "KSHS"},
+          {"course": "BREAK"},
+          {"course": "CG", "instructor": "NJN"},
+          {"course": "Project Work"}
+        ],
+        "Wednesday": [
+          {"course": "AI", "instructor": "TA"},
+          {"course": "CDC", "instructor": "KSHS"},
+          {"course": "EWF LAB", "instructor": "KSHS"},
+          {"course": "BREAK"},
+          {"course": "CG LAB", "instructor": "NJN"},
+          {"course": "Project Work"},
+          {}
+        ]
+      }
+    },
+    {
+      "batch": "CSE 10 (5th Sem.)",
+      "room_no": "204",
+      "schedule": {
+        "Saturday": [
+          {},
+          {},
+          {"course": "OS", "instructor": "NJN"},
+          {},
+          {},
+          {"course": "DT", "instructor": "TA"},
+          {"course": "PI", "instructor": "KSHS"}
+        ],
+        "Monday": [
+          {},
+          {},
+          {"course": "OS", "instructor": "NJN"},
+          {},
+          {},
+          {"course": "DT", "instructor": "TA"},
+          {"course": "PI", "instructor": "KSHS"}
+        ],
+        "Wednesday": [
+          {},
+          {},
+          {"course": "OS", "instructor": "NJN"},
+          {},
+          {},
+          {"course": "DT", "instructor": "TA"},
+          {"course": "PI", "instructor": "KSHS"}
+        ]
+      }
+    },
+    {
+      "batch": "CSE 11 (3rd Sem.)",
+      "room_no": "402",
+      "schedule": {
+        "Saturday": [
+          {"course": "ODE", "instructor": "AAR"},
+          {"course": "DS", "instructor": "NJN"},
+          {"course": "CA", "instructor": "TA"},
+          {"course": "BREAK"},
+          {"course": "FBS", "instructor": "II"},
+          {"course": "OOP", "instructor": "KSHS"},
+          {"course": "Project Work"}
+        ],
+        "Monday": [
+          {"course": "DS LAB", "instructor": "NJN"},
+          {"course": "ODE", "instructor": "AAR"},
+          {"course": "CA", "instructor": "TA"},
+          {"course": "BREAK"},
+          {"course": "FBS", "instructor": "II"},
+          {"course": "OOP LAB", "instructor": "KSHS"},
+          {"course": "Project Work"}
+        ],
+        "Wednesday": [
+          {"course": "ODE", "instructor": "AAR"},
+          {"course": "DS", "instructor": "NJN"},
+          {"course": "CA", "instructor": "TA"},
+          {"course": "BREAK"},
+          {"course": "FBS", "instructor": "II"},
+          {"course": "OOP", "instructor": "KSHS"},
+          {"course": "Project Work"}
+        ]
+      }
+    },
+    
+    {
+      "batch": "CSE 12 (2nd Sem.)",
+      "room_no": "204",
+      "schedule": {
+        "Sunday": [
+          {"course": "SP", "instructor": "KSHS"},
+          {"course": "DN", "instructor": "NJN"},
+          {"course": "DSD", "instructor": "TA"},
+          {"course": "BREAK"},
+          {"course": "LA", "instructor": "AAR"},
+          {"course": "HEIB", "instructor": "II"},
+          {"course": "Project Work", "instructor": "NJN"}
+        ],
+        "Tuesday": [
+          {"course": "DSD", "instructor": "TA"},
+          {"course": "SP", "instructor": "KSHS"},
+          {"course": "DN", "instructor": "NJN"},
+          {"course": "BREAK"},
+          {"course": "LA", "instructor": "AAR"},
+          {"course": "HEIB", "instructor": "II"},
+          {"course": "Project Work", "instructor": "NJN"}
+        ],
+        "Thursday": [
+          {"course": "DSD", "instructor": "TA"},
+          {"course": "HEIB", "instructor": "II"},
+          {"course": "SP", "instructor": "KSHS"},
+          {"course": "BREAK"},
+          {"course": "LA", "instructor": "AAR"},
+          {"course": "DN", "instructor": "NJN"},
+          {"course": "Project Work"}
+        ]
+      }
+    },
+    {
+      "batch": "CSE 13 (1st Sem.)",
+      "room_no": "402",
+      "schedule": {
+        "Sunday": [
+          {"course": "EEC", "instructor": "SI"},
+          {"course": "PHY", "instructor": "TA"},
+          {"course": "SPL", "instructor": "KSHS"},
+          {"course": "BREAK"},
+          {"course": "ENG", "instructor": "NJN"},
+          {"course": "CAL", "instructor": "NJN"},
+          {"course": "Project Work"}
+        ],
+        "Tuesday": [
+          {"course": "EEC", "instructor": "SI"},
+          {"course": "PHY", "instructor": "TA"},
+          {"course": "SPL", "instructor": "KSHS"},
+          {"course": "BREAK"},
+          {"course": "ENG", "instructor": "NJN"},
+          {"course": "CAL", "instructor": "NJN"},
+          {"course": "Project Work"}
+        ],
+        "Thursday": [
+          {"course": "CAL", "instructor": "NJN"},
+          {"course": "SPL", "instructor": "KSHS"},
+          {"course": "PHY", "instructor": "TA"},
+          {"course": "BREAK"},
+          {"course": "ENG", "instructor": "NJN"},
+          {"course": "EEC LAB", "instructor": "SI"},
+          {"course": "Project Work", "instructor": "NJN"}
+        ]
+      }
+    }
+  ],
+  "instructors": [
+    {
+      "short": "TA",
+      "full_name": "Tasnuba Ali"
+    },
+    {
+      "short": "AAR",
+      "full_name": "Abdullah Al Roman"
+    },
+    {
+      "short": "II",
+      "full_name": "Iftakharul Islam"
+    },
+    {
+      "short": "SI",
+      "full_name": "Md. Salatul Islam"
+    },
+    {
+      "short": "KSHS",
+      "full_name": "Khondokar Sakibul Habib Sakib"
+    },
+    {
+      "short": "NJN",
+      "full_name": "Nusrat Jevin Nir"
+    }
+  ]
+}
