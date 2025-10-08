@@ -50,7 +50,6 @@ const buildInstructorGrid = (db: Database, instructorShort: string) => {
 type Props = { selectedInstructor: string };
 
 const InstructorTable: React.FC<Props> = ({ selectedInstructor }) => {
-  // @ts-ignore: JSON import, trust structure
   const db = database;
   const grid = buildInstructorGrid(db as Database, selectedInstructor);
 
