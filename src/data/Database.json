@@ -107,7 +107,7 @@
       "schedule": {
         "Sunday": [
           {"course": "SP", "instructor": "KSHS"},
-          {"course": "DN", "instructor": "NJN"},
+          {"course": "DM", "instructor": "NJN"},
           {"course": "DSD", "instructor": "TA"},
           {"course": "BREAK"},
           {"course": "LA", "instructor": "AAR"},
@@ -117,7 +117,7 @@
         "Tuesday": [
           {"course": "DSD", "instructor": "TA"},
           {"course": "SP", "instructor": "KSHS"},
-          {"course": "DN", "instructor": "NJN"},
+          {"course": "DM", "instructor": "NJN"},
           {"course": "BREAK"},
           {"course": "LA", "instructor": "AAR"},
           {"course": "HEIB", "instructor": "II"},
@@ -129,7 +129,7 @@
           {"course": "SP", "instructor": "KSHS"},
           {"course": "BREAK"},
           {"course": "LA", "instructor": "AAR"},
-          {"course": "DN", "instructor": "NJN"},
+          {"course": "DM", "instructor": "NJN"},
           {"course": "Project Work"}
         ]
       }
