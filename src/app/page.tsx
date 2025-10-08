@@ -1,18 +1,9 @@
-
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import InstructorTable from "../components/InstructorTable";
 import SearchParamsProvider from "../components/SearchParamsProvider";
 import database from "../data/Database.json";
-
-type Schedule = { 
-  [key: string]: Array<{ 
-    course?: string; 
-    instructor?: string; 
-    [key: string]: any;
-  }> 
-};
 
 export default function Home() {
   const db = database;
@@ -42,10 +33,27 @@ export default function Home() {
   );
 }
 
+interface Database {
+  Department: string;
+  days: string[];
+  time_slots: string[];
+  batches: Array<{
+    batch: string;
+    room_no: string;
+    schedule: {
+      [day: string]: Array<{ course?: string; instructor?: string }> | undefined;
+    };
+  }>;
+  instructors: Array<{
+    short: string;
+    full_name: string;
+  }>;
+}
+
 interface HomeContentProps {
   searchParams: URLSearchParams;
-  router: any;
-  db: any;
+  router: { push: (url: string, options?: { scroll: boolean }) => void };
+  db: Database;
   instructorMode: boolean;
   setInstructorMode: (value: boolean) => void;
   selectedBatch: number;
@@ -84,7 +92,7 @@ function HomeContent({
       }
     }
 
-    if (instructor && db.instructors.find((inst: any) => inst.short === instructor)) {
+    if (instructor && db.instructors.find((inst) => inst.short === instructor)) {
       setSelectedInstructor(instructor);
     }
   }, [searchParams, db.batches.length, db.instructors, setInstructorMode, setSelectedBatch, setSelectedInstructor]);
@@ -99,7 +107,7 @@ function HomeContent({
     if (!currentBatch.schedule) return [];
     
     return days.filter((day: string) => {
-      const daySchedule = (currentBatch.schedule as any)?.[day];
+      const daySchedule = currentBatch.schedule?.[day];
       if (!daySchedule || !Array.isArray(daySchedule)) return false;
       
       // Check if any time slot has a course (not empty or just break)
@@ -171,7 +179,7 @@ function HomeContent({
         <div className="batch-info" style={{display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between"}}>
           <div>
             {instructorMode ? (
-              <h2 id="currentBatch">{db.instructors.find((i: any) => i.short === selectedInstructor)?.full_name || ""}</h2>
+              <h2 id="currentBatch">{db.instructors.find((i) => i.short === selectedInstructor)?.full_name || ""}</h2>
             ) : (
               <>
                 <h2 id="currentBatch">{currentBatch.batch}</h2>
@@ -194,10 +202,10 @@ function HomeContent({
               }}
             >
               {instructorMode
-                ? db.instructors.map((inst: any) => (
+                ? db.instructors.map((inst) => (
                     <option key={inst.short} value={inst.short}>{inst.full_name}</option>
                   ))
-                : batches.map((batch: any, idx: number) => (
+                : batches.map((batch, idx: number) => (
                     <option key={batch.batch} value={idx}>{batch.batch}</option>
                   ))}
             </select>
@@ -221,7 +229,7 @@ function HomeContent({
                   <tr key={slotIdx}>
                     <td className="cell-regular">{slot}</td>
                     {activeDays.map((day: string) => {
-                      const dayArr = (currentBatch.schedule as any)?.[day] || [];
+                      const dayArr = currentBatch.schedule?.[day] || [];
                       const cell = Array.isArray(dayArr) && dayArr[slotIdx] ? dayArr[slotIdx] : undefined;
                       return (
                         <td key={day} className={cell && cell.course ? (cell.course.toLowerCase().includes("lab") ? "cell-lab" : "cell-regular") : "cell-empty"}>
