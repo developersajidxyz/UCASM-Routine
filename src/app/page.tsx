@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
@@ -164,7 +165,16 @@ function HomeContent({
     <div className="container">
       <header>
         <div className="title">
-          <h1><a href="https://ucasm.netlify.app/">UCASM </a><p>Department of CSE</p></h1>
+          <a href="https://ucasm.netlify.app/" style={{display: 'flex', alignItems: 'center', textDecoration: 'none'}}>
+            <img 
+              src="/UCASM-logo-002-01.png" 
+              alt="UCASM Logo" 
+              className="ucasm-logo"
+              style={{height: '2.5rem', width: 'auto', maxWidth: '300px', objectFit: 'contain', marginRight: 8}}
+            />
+            <span style={{display: 'none'}}>UCASM</span>
+          </a>
+          <p style={{margin: 0, fontWeight: 500, color: '#3AAFA9', fontSize: '1.1rem'}}>Department of CSE</p>
         </div>
         <div>
           <button
