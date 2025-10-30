@@ -1,7 +1,16 @@
 {
   "Department": "CSE",
+  "Effective From": "01/10/2025",
   "days": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
-  "time_slots": ["09:30-10:30", "10:40-11:40", "11:50-12:50", "12:50-01:20", "01:20-02:20", "02:30-3:30", "3:40-4:40"],
+  "time_slots": [
+    "09:30-10:30",
+    "10:40-11:40",
+    "11:50-12:50",
+    "12:50-01:20",
+    "01:20-02:20",
+    "02:30-03:30",
+    "03:40-04:40"
+  ],
   "batches": [
     {
       "batch": "CSE 9 (7th Sem.)",
@@ -10,27 +19,29 @@
         "Saturday": [
           {"course": "AI", "instructor": "TA"},
           {"course": "CDC LAB", "instructor": "KSHS"},
-          {"course": "EWF", "instructor": "KSHS"},
-          {"course": "BREAK"},
+          {"course": "EWE", "instructor": "KSHS"},
+          {"course": "BREAK", "instructor": null},
           {"course": "CG", "instructor": "NJN"},
-          {"course": "Project Work"}
+          {"course": "ENG", "instructor": null},
+          {"course": null, "instructor": null}
         ],
         "Monday": [
           {"course": "AI LAB", "instructor": "TA"},
           {"course": "CDC", "instructor": "KSHS"},
-          {"course": "EWF", "instructor": "KSHS"},
-          {"course": "BREAK"},
+          {"course": "EWE", "instructor": "KSHS"},
+          {"course": "BREAK", "instructor": null},
           {"course": "CG", "instructor": "NJN"},
-          {"course": "Project Work"}
+          {"course": "ENG", "instructor": null},
+          {"course": null, "instructor": null}
         ],
         "Wednesday": [
           {"course": "AI", "instructor": "TA"},
           {"course": "CDC", "instructor": "KSHS"},
           {"course": "EWF LAB", "instructor": "KSHS"},
-          {"course": "BREAK"},
+          {"course": "BREAK", "instructor": null},
           {"course": "CG LAB", "instructor": "NJN"},
-          {"course": "Project Work"},
-          {}
+          {"course": "Project Work", "instructor": null},
+          {"course": null, "instructor": null}
         ]
       }
     },
@@ -39,29 +50,29 @@
       "room_no": "204",
       "schedule": {
         "Saturday": [
-          {},
-          {},
+          {"course": null, "instructor": null},
+          {"course": null, "instructor": null},
           {"course": "OS", "instructor": "NJN"},
-          {},
-          {},
+          {"course": "BREAK", "instructor": null},
+          {"course": null, "instructor": null},
           {"course": "DT", "instructor": "TA"},
           {"course": "PI", "instructor": "KSHS"}
         ],
         "Monday": [
-          {},
-          {},
+          {"course": null, "instructor": null},
+          {"course": null, "instructor": null},
           {"course": "OS", "instructor": "NJN"},
-          {},
-          {},
+          {"course": "BREAK", "instructor": null},
+          {"course": null, "instructor": null},
           {"course": "DT", "instructor": "TA"},
           {"course": "PI", "instructor": "KSHS"}
         ],
         "Wednesday": [
-          {},
-          {},
+          {"course": null, "instructor": null},
+          {"course": null, "instructor": null},
           {"course": "OS", "instructor": "NJN"},
-          {},
-          {},
+          {"course": "BREAK", "instructor": null},
+          {"course": null, "instructor": null},
           {"course": "DT", "instructor": "TA"},
           {"course": "PI", "instructor": "KSHS"}
         ]
@@ -75,62 +86,61 @@
           {"course": "ODE", "instructor": "AAR"},
           {"course": "DS", "instructor": "NJN"},
           {"course": "CA", "instructor": "TA"},
-          {"course": "BREAK"},
+          {"course": "BREAK", "instructor": null},
           {"course": "FBS", "instructor": "II"},
           {"course": "OOP", "instructor": "KSHS"},
-          {"course": "Project Work"}
+          {"course": "Project Work", "instructor": null}
         ],
         "Monday": [
           {"course": "DS LAB", "instructor": "NJN"},
-          {"course": "ODE", "instructor": "AAR"},
           {"course": "CA", "instructor": "TA"},
-          {"course": "BREAK"},
+          {"course": "ODE", "instructor": "AAR"},
+          {"course": "BREAK", "instructor": null},
           {"course": "FBS", "instructor": "II"},
           {"course": "OOP LAB", "instructor": "KSHS"},
-          {"course": "Project Work"}
+          {"course": "Project Work", "instructor": null}
         ],
         "Wednesday": [
           {"course": "ODE", "instructor": "AAR"},
           {"course": "DS", "instructor": "NJN"},
           {"course": "CA", "instructor": "TA"},
-          {"course": "BREAK"},
+          {"course": "BREAK", "instructor": null},
           {"course": "FBS", "instructor": "II"},
           {"course": "OOP", "instructor": "KSHS"},
-          {"course": "Project Work"}
+          {"course": "Project Work", "instructor": null}
         ]
       }
     },
-    
     {
       "batch": "CSE 12 (2nd Sem.)",
       "room_no": "204",
       "schedule": {
         "Sunday": [
-          {"course": "SP", "instructor": "KSHS"},
+          {"course": "SP", "instructor": "NJN"},
           {"course": "DM", "instructor": "NJN"},
           {"course": "DSD", "instructor": "TA"},
-          {"course": "BREAK"},
+          {"course": "BREAK", "instructor": null},
           {"course": "LA", "instructor": "AAR"},
           {"course": "HEIB", "instructor": "II"},
           {"course": "Project Work", "instructor": "NJN"}
         ],
         "Tuesday": [
           {"course": "DSD", "instructor": "TA"},
-          {"course": "SP", "instructor": "KSHS"},
+          {"course": "SP", "instructor": "NJN"},
           {"course": "DM", "instructor": "NJN"},
-          {"course": "BREAK"},
+          {"course": "BREAK", "instructor": null},
           {"course": "LA", "instructor": "AAR"},
           {"course": "HEIB", "instructor": "II"},
           {"course": "Project Work", "instructor": "NJN"}
         ],
         "Thursday": [
           {"course": "DSD", "instructor": "TA"},
-          {"course": "HEIB", "instructor": "II"},
-          {"course": "SP", "instructor": "KSHS"},
-          {"course": "BREAK"},
-          {"course": "LA", "instructor": "AAR"},
           {"course": "DM", "instructor": "NJN"},
-          {"course": "Project Work"}
+          {"course": "SP", "instructor": "KSHS"},
+          {"course": "BREAK", "instructor": null},
+          {"course": "LA", "instructor": "AAR"},
+          {"course": "HEIB", "instructor": "II"},
+          {"course": "Project Work", "instructor": null}
         ]
       }
     },
@@ -139,29 +149,29 @@
       "room_no": "402",
       "schedule": {
         "Sunday": [
-          {"course": "EEC", "instructor": "SI"},
-          {"course": "PHY", "instructor": "TA"},
           {"course": "SPL", "instructor": "KSHS"},
-          {"course": "BREAK"},
-          {"course": "ENG", "instructor": "NJN"},
+          {"course": "PHY", "instructor": "TA"},
           {"course": "CAL", "instructor": "NJN"},
-          {"course": "Project Work"}
+          {"course": "BREAK", "instructor": null},
+          {"course": "ENG", "instructor": "FI"},
+          {"course": "EEC", "instructor": "SI"},
+          {"course": "Project Work", "instructor": null}
         ],
         "Tuesday": [
           {"course": "EEC", "instructor": "SI"},
           {"course": "PHY", "instructor": "TA"},
           {"course": "SPL", "instructor": "KSHS"},
-          {"course": "BREAK"},
-          {"course": "ENG", "instructor": "NJN"},
+          {"course": "BREAK", "instructor": null},
+          {"course": "ENG", "instructor": "FI"},
           {"course": "CAL", "instructor": "NJN"},
-          {"course": "Project Work"}
+          {"course": "Project Work", "instructor": null}
         ],
         "Thursday": [
           {"course": "CAL", "instructor": "NJN"},
           {"course": "SPL", "instructor": "KSHS"},
           {"course": "PHY", "instructor": "TA"},
-          {"course": "BREAK"},
-          {"course": "ENG", "instructor": "NJN"},
+          {"course": "BREAK", "instructor": null},
+          {"course": "ENG", "instructor": "FI"},
           {"course": "EEC LAB", "instructor": "SI"},
           {"course": "Project Work", "instructor": "NJN"}
         ]
@@ -169,29 +179,12 @@
     }
   ],
   "instructors": [
-    {
-      "short": "TA",
-      "full_name": "Tasnuba Ali"
-    },
-    {
-      "short": "AAR",
-      "full_name": "Abdullah Al Roman"
-    },
-    {
-      "short": "II",
-      "full_name": "Iftakharul Islam"
-    },
-    {
-      "short": "SI",
-      "full_name": "Md. Salatul Islam"
-    },
-    {
-      "short": "KSHS",
-      "full_name": "Khondokar Sakibul Habib Sakib"
-    },
-    {
-      "short": "NJN",
-      "full_name": "Nusrat Jevin Nir"
-    }
+    {"short": "TA", "full_name": "Tasnuba Ali", "total_class": 16},
+    {"short": "AAR", "full_name": "Abdullah Al Roman", "total_class": 6},
+    {"short": "II", "full_name": "Iftakharul Islam", "total_class": 6,
+    {"short": "SI", "full_name": "Md. Salatul Islam", "total_class": 3},
+    {"short": "KSHS", "full_name": "Khondokar Sakibul Habib Sakib", "total_class": 16},
+    {"short": "NJN", "full_name": "Nusrat Jevin Nir", "total_class": 18},
+    {"short": "FI", "full_name": "Fatema Islam", "total_class": 2}
   ]
 }
